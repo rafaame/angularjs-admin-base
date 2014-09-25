@@ -1,0 +1,62 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+
+@import 'lesshat.less';
+
+
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+
+@import '../../vendor/bootstrap/less/bootstrap.less';
+
+
+/**
+ * This is our main variables file. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+
+@import 'variables.less';
+
+
+// UI, uses Bootstrap's variables
+@import "ui/ui.less";
+
+// Plugins, overrides plugins' style
+@import "plugins/bootstrap-slider.less";
+@import "plugins/responsive-tables.less";
+@import "plugins/easypiecharts.less";
+@import "plugins/toastr.less";
+@import "plugins/sparkline.less";
+@import "plugins/jquery-steps.less";
+@import "plugins/angular-ui-tree.less";
+@import "plugins/morris.less";
+@import "plugins/jqvmap.less";
+@import "plugins/ng-tags-input.less";
+@import "plugins/intro.less";
+
+// sections
+@import "sections/layouts.less";
+@import "sections/shared.less";
+@import "sections/nav.less";
+@import "sections/nav-off-canvas.less";
+@import "sections/nav-horizontal.less";
+@import "sections/nav-min.less";
+@import "sections/header.less";
+@import "sections/body.less";
+
+
+
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using.
+ *
+ * TODO: In a later version of this boilerplate, I'd like to automate this.
+ */
+
+@import '../app/signin/signin.less';
